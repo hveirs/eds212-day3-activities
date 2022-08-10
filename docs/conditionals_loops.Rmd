@@ -1,0 +1,99 @@
+---
+title: "conditionals_loops"
+author: "Hailey Veirs"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+```
+
+## Part 1
+
+#### Task 1
+
+```{r}
+pm2_5 <- 48
+
+if (pm2_5 < 100) {
+  print("Low to Moderate risk")
+} else if (pm2_5 >= 100 & pm2_5 < 150) {
+  print("Unhealthy for sensitive groups")
+} else if (pm2_5 >= 150) {
+  print("Health risk present")
+}
+
+```
+
+#### Task 2
+
+```{r}
+species <- c("dog")
+
+if (species == "blue whale") {
+  print("You found a blue whale!")
+}
+```
+
+#### Task 3 
+
+```{r}
+max_airtemp_c <- 27.1
+
+if (max_airtemp_c > 27) {
+  print("Temperature too high")
+} else if (max_airtemp_c <= 27) {
+  print("Temperature OK")
+}
+```
+
+#### Task 4
+
+```{r}
+base_burrito <- 6.50
+main_ingredient <- c("steak")
+
+if (main_ingredient == "veggie") {
+  price <- base_burrito
+  print(price)
+} else if (main_ingredient == "chicken") {
+  price <- base_burrito + 3.00
+  print(price)
+} else if (main_ingredient == "steak") {
+  price <- base_burrito + 3.25
+  print(price)
+}
+
+```
+
+## For Loops
+
+#### Task 5
+
+```{r}
+fish <- c(8, 10, 12, 23)
+
+for (i in seq_along(fish)) {
+  count = (fish[i] / sum(fish)) * 100
+  print(count)
+}
+
+```
+
+#### Task 6
+
+```{r}
+month.name
+
+for (i in seq_along(month.name)) {
+  print(paste(month.name[i], "is month", i))
+}
+```
+
+
+
+
+
